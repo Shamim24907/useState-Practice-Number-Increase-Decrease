@@ -3,20 +3,23 @@ import React from 'react';
 export default function OurVision() {
   const visionItems = [
     {
-      icon: '/images/o1.png', // Farm Development icon
+      icon: '/images/o1.png',
       title: 'Farm Development',
-      description: 'We use IoT-driven data to guide complete farm development—from identifying which soil suits which crop to monitoring growth, resources, and overall productivity. Every step is optimized through real-time insights to ensure smarter, efficient, and sustainable farming.'
+      description:
+        'We use IoT-driven data to guide complete farm development—from identifying which soil suits which crop to monitoring growth, resources, and overall productivity. Every step is optimized through real-time insights to ensure smarter, efficient, and sustainable farming.',
     },
     {
-      icon: '/images/o2.png', // Crop Management icon
+      icon: '/images/o2.png',
       title: 'Crop Management',
-      description: 'Our IoT-powered Crop Management system tracks crop health, growth stages, soil conditions, and resource needs in real time. From planting to harvesting, every decision is optimized with data to ensure higher yield, reduced waste, and smarter farming.'
+      description:
+        'Our IoT-powered Crop Management system tracks crop health, growth stages, soil conditions, and resource needs in real time. From planting to harvesting, every decision is optimized with data to ensure higher yield, reduced waste, and smarter farming.',
     },
     {
-      icon: '/images/o3.png', // Soil Restoration icon
+      icon: '/images/o3.png',
       title: 'Soil Restoration',
-      description: 'Our IoT-based Soil Restoration process identifies nutrient loss, monitors soil health, and guides precise treatments to revive fertility. Through data-driven actions, we rebuild soil strength, improve productivity, and support long-term sustainable farming.'
-    }
+      description:
+        'Our IoT-based Soil Restoration process identifies nutrient loss, monitors soil health, and guides precise treatments to revive fertility. Through data-driven actions, we rebuild soil strength, improve productivity, and support long-term sustainable farming.',
+    },
   ];
 
   return (
@@ -31,9 +34,13 @@ export default function OurVision() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {visionItems.map((item, index) => (
             <div key={index} className="text-left">
-              {/* Icon with background circle */}
-              <div className="mb-6 w-16 h-16 md:w-20 md:h-20  flex items-center justify-center">
-                <img src={item.icon} alt={item.title} className="w-8 h-8 md:w-12 md:h-12" />
+              {/* Icon */}
+              <div className="mb-6 w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-14 h-14 md:w-20 md:h-20"
+                />
               </div>
 
               {/* Title */}

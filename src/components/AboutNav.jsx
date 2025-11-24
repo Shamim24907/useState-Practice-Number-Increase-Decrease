@@ -21,10 +21,11 @@ function Navbar() {
       className={`
         fixed top-0 left-0 right-0 z-50
         transition-all duration-300
-        ${isScrolled ? 'bg-white/70 shadow-md' : 'bg-white/60 '}
+        ${isScrolled ? 'bg-white/70 shadow-md backdrop-blur-md' : 'bg-white/60 backdrop-blur-sm'}
       `}
     >
-      <div className="w-full max-w-[1440px] mx-auto py-4 px-6 lg:px-[120px]">
+      {/* CONTAINER FIXED 1440px */}
+      <div className="max-w-[1440px] mx-auto w-full px-4 lg:px-8 xl:px-10 py-4">
         <div className="flex items-center justify-between">
 
           {/* Logo */}
@@ -36,7 +37,7 @@ function Navbar() {
             />
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {menuItems.map((item) => (
               <a
@@ -51,7 +52,6 @@ function Navbar() {
                       : "text-gray-700 border-b-2 border-transparent hover:text-green-700 hover:border-green-700 hover:scale-105"
                   }
                 `}
-                style={{ display: "inline-block" }} 
               >
                 {item}
               </a>
@@ -61,7 +61,7 @@ function Navbar() {
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <button className="flex items-center px-6 py-3 text-white text-sm font-medium bg-green-800 rounded-lg hover:bg-green-900 transition">
-              <span>Get Started</span>
+              Get Started
             </button>
 
             <button className="px-6 py-3 text-gray-800 text-sm font-medium border-2 border-gray-800 rounded-lg hover:bg-gray-800 hover:text-white transition">
@@ -69,8 +69,11 @@ function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button onClick={toggleMobileMenu} className="p-2 rounded-lg hover:bg-gray-100 transition lg:hidden">
+          {/* Mobile Menu Icon */}
+          <button
+            onClick={toggleMobileMenu}
+            className="p-2 rounded-lg hover:bg-gray-100 transition lg:hidden"
+          >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6 text-gray-800" />
             ) : (
@@ -100,7 +103,6 @@ function Navbar() {
               </button>
             </div>
 
-            {/* Mobile Menu */}
             <nav className="flex-1 px-4 py-4 overflow-y-auto">
               {menuItems.map((item) => (
                 <a
@@ -118,7 +120,6 @@ function Navbar() {
                         : "text-gray-700 hover:text-green-700 hover:scale-105"
                     }
                   `}
-                  style={{ display: "inline-block" }}
                 >
                   {item}
                 </a>
